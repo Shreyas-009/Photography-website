@@ -32,11 +32,14 @@ nav .links {
 
 #text {
     width: 80%;
-    margin-top: 10%;
-    margin-left: 10%;
+    margin: 0 auto;
     color: white;
     font-size: 60px;
     text-transform: uppercase;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     & h1 {
         font-weight: 100;
@@ -93,7 +96,50 @@ main h1:nth-child(7) {
     rotate: 0deg;
 }
 
-/* Add responsive styles at the end of the file */
+@media (max-width: 1024px) {
+
+    #text {
+        width: 80%;
+        height: calc(100vh - 200px);
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+        margin: 0 auto;
+
+        & h1 {
+            font-weight: 100;
+            letter-spacing: 10px;
+            font-size: 72px;
+        }
+    }
+
+    main h1:nth-child(3) {
+        text-align: end;
+        padding-right: 35px;
+    }
+
+    img {
+        height: 350px;
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+        top: 30%;
+    }
+
+
+    main h1:nth-child(6) {
+        font-size: 12px;
+    }
+
+    main h1:nth-child(7) {
+        font-size: 12px;
+
+    }
+}
+
 @media (max-width: 768px) {
 
     nav {
@@ -118,27 +164,25 @@ main h1:nth-child(7) {
         height: calc(100vh - 200px);
         display: flex;
         flex-direction: column;
-       
         margin: 0;
-        justify-content: center; /* Center vertically */
-        margin: 0 auto; /* Center the container */
-        padding-bottom: 100px; /* Add some space from bottom */
+        justify-content: center;
+        margin: 0 auto;
 
 
         & h1 {
             font-weight: 100;
             letter-spacing: 10px;
-            font-size: 30px;
+            font-size: 42px;
         }
     }
 
 
     #img2 {
-        top: 35%;
+        top: 31%;
     }
 
     #img3 {
-        top: 40%;
+        top: 31%;
     }
 
     main h1:nth-child(2) {
@@ -146,12 +190,12 @@ main h1:nth-child(7) {
     }
 
     main h1:nth-child(3) {
-        text-align: center;
+        text-align: end;
     }
 
     img {
         position: absolute;
-        top: 34%;
+        top: 31%;
         left: 30%;
         height: 300px;
     }
@@ -164,39 +208,25 @@ main h1:nth-child(7) {
         text-transform: uppercase;
         font-size: 18px;
         font-weight: 100;
+
     }
 
     main h1:nth-child(7) {
-        color: red;
         text-transform: uppercase;
         position: absolute;
         bottom: 15px;
-        left: 50%;
+        left: 70%;
         font-size: 18px;
-        text-align: center;
         font-weight: 100;
+        text-wrap: nowrap;
         transform: translate(-50%);
     }
+
+    .br {
+        display: none;
+    }
+
+    .span {
+        display: none;
+    }
 }
-
-/* @media (max-width: 480px) {
-    #text {
-        font-size: 30px;
-    }
-
-    img {
-        height: 150px;
-    }
-
-    nav {
-        padding: 20px 10px;
-    }
-
-    nav .links {
-        gap: 15px;
-    }
-
-    main h1:nth-child(6) {
-        margin-top: 300px;
-    }
-} */
